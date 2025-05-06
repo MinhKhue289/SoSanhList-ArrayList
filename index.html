@@ -128,6 +128,59 @@ int retrievedInt = (int)arrayList[0]; // Unboxing & Casting: object -> int
             </div>
         </section>
 
+        <section class="comparison-item">
+            <div class="item-header">
+                <h2>6. So sánh C/C++ và C#</h2>
+                 <button class="toggle-btn">+</button>
+            </div>
+            <div class="item-content">
+                <p>
+                    Trong khi <code>List&lt;T&gt;</code> và <code>ArrayList</code> là các cấu trúc dữ liệu trong C#, thì bản thân C# lại là một ngôn ngữ khác biệt đáng kể so với C và C++.
+                </p>
+
+                <h3>Sự khác biệt chính:</h3>
+
+                <h4>a. Môi trường chạy và Biên dịch:</h4>
+                <ul>
+                    <li><strong>C/C++:</strong> Biên dịch trực tiếp thành mã máy (native code) cụ thể cho kiến trúc phần cứng và hệ điều hành. Chương trình chạy trực tiếp trên OS.</li>
+                    <li><strong>C#:</strong> Biên dịch thành Mã Trung Gian (Intermediate Language - IL). Mã IL này chạy trên một môi trường quản lý gọi là .NET Runtime (trước đây là CLR - Common Language Runtime). Khi chạy, mã IL được dịch Just-In-Time (JIT) thành mã máy.</li>
+                </ul>
+
+                 <h4>b. Quản lý bộ nhớ:</h4>
+                <ul>
+                    <li><strong>C/C++:</strong> Quản lý bộ nhớ thủ công. Lập trình viên phải tự cấp phát (<code>malloc</code>/<code>new</code>) và giải phóng (<code>free</code>/<code>delete</code>) bộ nhớ. Dễ dẫn đến lỗi rò rỉ bộ nhớ (memory leaks) hoặc truy cập bộ nhớ không hợp lệ (segmentation faults).</li>
+                    <li><strong>C#:</strong> Quản lý bộ nhớ tự động thông qua Bộ gom rác (Garbage Collector - GC). GC tự động theo dõi và giải phóng bộ nhớ không còn được sử dụng. Giảm thiểu đáng kể các lỗi liên quan đến bộ nhớ.</li>
+                </ul>
+
+                 <h4>c. Con trỏ:</h4>
+                <ul>
+                    <li><strong>C/C++:</strong> Sử dụng con trỏ rộng rãi để thao tác trực tiếp với địa chỉ bộ nhớ. Mạnh mẽ nhưng cũng là nguồn gốc của nhiều lỗi nguy hiểm.</li>
+                    <li><strong>C#:</strong> Hạn chế sử dụng con trỏ trong code thông thường (safe code). Con trỏ chỉ được dùng trong khối <code>unsafe</code>, yêu cầu quyền đặc biệt và không được GC quản lý. C# tập trung vào tham chiếu (references) an toàn hơn.</li>
+                </ul>
+
+                <h4>d. Hiệu năng:</h4>
+                 <ul>
+                    <li><strong>C/C++:</strong> Có tiềm năng đạt hiệu năng cực cao do kiểm soát sát phần cứng và không có overhead từ runtime hoặc GC (khi được tối ưu tốt).</li>
+                    <li><strong>C#:</strong> Có overhead từ JIT và GC, nhưng JIT hiện đại rất hiệu quả. Đối với nhiều loại ứng dụng, C# có hiệu năng tương đương hoặc rất gần C++, và thường nhanh hơn đáng kể so với C++ *chưa được tối ưu*.</li>
+                </ul>
+
+                 <h4>e. Phát triển:</h4>
+                 <ul>
+                    <li><strong>C/C++:</strong> Thường tốn nhiều thời gian phát triển hơn do quản lý bộ nhớ thủ công và các chi tiết cấp thấp.</li>
+                    <li><strong>C#:</strong> Tốc độ phát triển thường nhanh hơn nhờ có GC, thư viện lớp phong phú, cú pháp hiện đại và các công cụ phát triển mạnh mẽ (Visual Studio).</li>
+                 </ul>
+
+                 <h4>f. Lĩnh vực ứng dụng:</h4>
+                 <ul>
+                    <li><strong>C/C++:</strong> Phổ biến trong lập trình hệ thống (hệ điều hành, driver), nhúng, game engine (ví dụ: Unreal Engine), các thư viện tính toán hiệu năng cao.</li>
+                    <li><strong>C#:</strong> Phổ biến trong phát triển ứng dụng doanh nghiệp, web (ASP.NET), desktop (WPF, WinForms, MAUI), game (Unity), dịch vụ đám mây (Azure).</li>
+                 </ul>
+
+                 <p>
+                    <em>Tóm lại, C/C++ mang lại sự kiểm soát tuyệt đối ở cấp thấp, phù hợp cho các tác vụ cần hiệu năng cực đại và tương tác trực tiếp với phần cứng. C# là ngôn ngữ quản lý (managed), tập trung vào năng suất, an toàn và tốc độ phát triển nhanh hơn cho đa dạng các loại ứng dụng.</em>
+                </p>
+            </div>
+        </section>
     </main>
 <footer>
         <p>Nhóm 7 - Đề Tài 15</p>
